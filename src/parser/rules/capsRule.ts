@@ -1,0 +1,1 @@
+export const CAPS_PATTERN = /[A-ZА-ЯЁ]{2,}/;

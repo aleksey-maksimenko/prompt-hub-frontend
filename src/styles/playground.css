@@ -1,0 +1,207 @@
+.playground {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 100vh;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+  gap: 12px;
+
+  border-right: 1px solid #ddd;
+}
+
+.panel:last-child {
+  border-right: none;
+}
+
+.editor {
+  flex: 1;
+
+  resize: none;
+
+  padding: 12px;
+
+  font-size: 14px;
+  font-family: Consolas, monospace;
+}
+
+.preview {
+  flex: 1;
+
+  overflow: auto;
+
+  padding: 12px;
+  text-align: left;
+  background: #fafafa;
+  border: 1px solid #ddd;
+}
+
+.preview pre {
+  margin: 0;
+
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  font-family: Consolas, monospace;
+}
+.preview p,
+.preview h2,
+.preview div,
+.preview pre {
+  text-align: left;
+}
+
+/*
+========================================
+Тема Prompt Hub
+========================================
+*/
+
+:root {
+  --color-variable-bg: #dbeafe;
+  --color-variable-text: #1e40af;
+
+  --color-code-bg: #f1f5f9;
+  --color-code-text: #0f172a;
+
+  --color-caps-bg: #fee2e2;
+  --color-caps-text: #b91c1c;
+
+  --color-metaglyph: #7c3aed;
+
+  --color-decorator-bg: #ede9fe;
+  --color-decorator-text: #e2a809;
+
+  --color-divider: #d1d5db;
+}
+
+/*
+========================================
+Переменные {{variable}}
+========================================
+*/
+
+.token-variable {
+  padding: 2px 6px;
+
+  border-radius: 4px;
+
+  background: var(--color-variable-bg);
+  color: var(--color-variable-text);
+
+  font-weight: 600;
+}
+
+/*
+========================================
+Inline Code
+========================================
+*/
+
+.token-code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  font-family: Consolas, monospace;
+}
+
+/*
+========================================
+CAPS слова
+========================================
+*/
+
+.token-caps {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--color-caps-bg);
+  color: var(--color-caps-text);
+
+  font-weight: 700;
+}
+
+/*
+========================================
+MetaGlyph
+========================================
+*/
+
+.token-metaglyph {
+  color: var(--color-metaglyph);
+  font-weight: 700;
+}
+
+/*
+========================================
+Decorator
+========================================
+*/
+
+.token-decorator {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+
+  background: var(--color-decorator-bg);
+  color: var(--color-decorator-text);
+  font-weight: 600;
+}
+
+.token-xml {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.token-code-block {
+  margin: 8px 0;
+  padding: 12px;
+  overflow-x: auto;
+
+  background: #f8fafc;
+  border-left: 3px solid #cbd5e1;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+  white-space: pre-wrap;
+}
+
+.token-bold {
+  font-weight: 700;
+}
+.token-italic {
+  font-style: italic;
+}
+
+.empty-line {
+  height: 1rem;
+}
+
+.toolbar {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.toolbar button {
+  padding: 6px 10px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 6px;
+
+  background: white;
+
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background: #f3f4f6;
+}
