@@ -152,6 +152,7 @@ npm install
 ```npm run server```
 
 Архитектура проекта
+```
 src
 │
 ├── api
@@ -231,3 +232,4 @@ src
 ├── App.tsx
 ├── main.tsx
 └── index.css
+```
